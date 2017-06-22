@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="copyright" content="" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="screen-orientation"content="portrait">
+  <meta name="x5-orientation"content="portrait">
+  <title>sellapp</title>
+  <link rel="stylesheet" href="static/css/reset.css">
+  <!--<link rel="stylesheet" href="./styles.css">-->
+  <script type="text/javascript">
+      //计算屏幕可视宽度
+      var deviceWidth = document.documentElement.clientWidth;
+      if(deviceWidth > 750){deviceWidth = 750;}
+      document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+
+      //阻止全局默认默认菜单
+      window.document.oncontextmenu = function(ev){
+          var oEvent	= event||ev;
+          oEvent.stopPropagation();
+          oEvent.preventDefault();
+          return false;
+      }
+  </script>
+</head>
+<body>
+<div id="app"></div>
+</body>
+</html>
